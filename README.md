@@ -58,6 +58,7 @@ You can run this script interactively from an SSH session.
 
 ```sh
 docker run --privileged \
+    -v /dev:/dev \
     -v $(realpath ./data):/data \
     rpi-envirophat \
     read-weather-sensors.py
