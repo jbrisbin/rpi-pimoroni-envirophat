@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 from envirophat import weather, light
+from subprocess import PIPE, Popen
+import sys, time, csv
 
 def get_cpu_temp():
 	process = Popen(['vcgencmd', 'measure_temp'], stdout=PIPE)

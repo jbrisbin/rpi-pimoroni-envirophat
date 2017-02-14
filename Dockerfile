@@ -28,8 +28,8 @@ RUN apt-get install -y \
 # Clean up APT cache
 RUN rm -rf /var/lib/apt/lists/*
 
-VOLUME /usr/local/sbin
 VOLUME /data
+WORKDIR /data
 
 # Set CMD to python3
-CMD ["python3"]
+ENTRYPOINT ["python3"]
