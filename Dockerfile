@@ -2,7 +2,7 @@ FROM jbrisbin/rpi-python3
 MAINTAINER Jon Brisbin <jon@jbrisbin.com>
 
 # Install Enviro pHAT
-RUN python3-envirophat --no-install-recommends
+RUN apt-get install -y python3-envirophat --no-install-recommends
 
 # Clean up APT cache
 RUN rm -rf /var/lib/apt/lists/*
